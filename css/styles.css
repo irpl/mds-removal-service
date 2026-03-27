@@ -1087,8 +1087,13 @@ h3 { font-size: 1.25rem; }
     background: var(--white) !important;
   }
 
+  .hero {
+    min-height: auto;
+    padding-top: 80px;
+  }
+
   .hero-content {
-    padding: 140px 0 60px;
+    padding: 60px 0;
   }
 
   .hero h1 {
