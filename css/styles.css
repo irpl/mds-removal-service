@@ -990,6 +990,33 @@ h3 { font-size: 1.25rem; }
 }
 
 /* ==========================================
+   FLOATING WHATSAPP BUTTON
+   ========================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25D366;
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: all var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  color: var(--white);
+}
+
+/* ==========================================
    ANIMATIONS
    ========================================== */
 .fade-in {
