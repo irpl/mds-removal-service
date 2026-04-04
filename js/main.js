@@ -82,6 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const from = formData.get('from');
     const to = formData.get('to');
     const date = formData.get('date');
+    const items = formData.get('items');
+    const fragile = formData.get('fragile');
+    const accessPickup = formData.get('access_pickup');
+    const accessDropoff = formData.get('access_dropoff');
+    const parking = formData.get('parking');
+    const services = formData.getAll('services');
     const message = formData.get('message');
 
     // Build email body
@@ -89,11 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = encodeURIComponent(
       `Name: ${name}\n` +
       `Phone: ${phone}\n` +
-      `Email: ${email}\n` +
-      `Moving From: ${from}\n` +
-      `Moving To: ${to}\n` +
+      `Email: ${email}\n\n` +
+      `LOCATIONS\n` +
+      `Pickup: ${from}\n` +
+      `Drop-off: ${to}\n` +
       `Preferred Date: ${date || 'Not specified'}\n\n` +
-      `Additional Details:\n${message || 'None'}`
+      `ITEMS\n` +
+      `Large Items: ${items || 'Not specified'}\n` +
+      `Fragile Items: ${fragile || 'Not specified'}\n\n` +
+      `ACCESS & PARKING\n` +
+      `Pickup Access: ${accessPickup || 'Not specified'}\n` +
+      `Drop-off Access: ${accessDropoff || 'Not specified'}\n` +
+      `Parking: ${parking || 'Not specified'}\n\n` +
+      `ADDITIONAL SERVICES\n` +
+      `${services.length > 0 ? services.join(', ') : 'None selected'}\n\n` +
+      `OTHER NOTES\n${message || 'None'}`
     );
 
     // Open mail client with pre-filled info
