@@ -410,12 +410,12 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="from">Moving From</label>
-                <input type="text" id="from" name="from" placeholder="Current location" required>
+                <label for="from">Pickup Location</label>
+                <input type="text" id="from" name="from" placeholder="e.g. St. Andrew, Kingston 8" required>
               </div>
               <div class="form-group">
-                <label for="to">Moving To</label>
-                <input type="text" id="to" name="to" placeholder="Destination" required>
+                <label for="to">Drop-off Location</label>
+                <input type="text" id="to" name="to" placeholder="e.g. Portmore, Spanish Town" required>
               </div>
             </div>
             <div class="form-group">
@@ -423,8 +423,58 @@
               <input type="date" id="date" name="date">
             </div>
             <div class="form-group">
-              <label for="message">Additional Details</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your move (items, special requirements, etc.)"></textarea>
+              <label for="items">Large Items</label>
+              <input type="text" id="items" name="items" placeholder="e.g. Queen bed, double-door fridge, 3 couches">
+            </div>
+            <div class="form-group">
+              <label>Fragile Items?</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="fragile" value="Yes"> Yes</label>
+                <label class="radio-option"><input type="radio" name="fragile" value="No" checked> No</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="access-pickup">Pickup Access</label>
+                <select id="access-pickup" name="access_pickup">
+                  <option value="" disabled selected>Select access type</option>
+                  <option value="Ground floor">Ground floor</option>
+                  <option value="Upstairs - stairs">Upstairs (stairs)</option>
+                  <option value="Upstairs - elevator">Upstairs (elevator)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="access-dropoff">Drop-off Access</label>
+                <select id="access-dropoff" name="access_dropoff">
+                  <option value="" disabled selected>Select access type</option>
+                  <option value="Ground floor">Ground floor</option>
+                  <option value="Upstairs - stairs">Upstairs (stairs)</option>
+                  <option value="Upstairs - elevator">Upstairs (elevator)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="parking">Parking Situation</label>
+              <select id="parking" name="parking">
+                <option value="" disabled selected>Where can the truck park?</option>
+                <option value="Inside the yard">Inside the yard</option>
+                <option value="At the gate">At the gate</option>
+                <option value="On the road">On the road</option>
+                <option value="Not sure">Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Additional Services</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option"><input type="checkbox" name="services" value="Furniture assembly/disassembly"> Furniture assembly / disassembly</label>
+                <label class="checkbox-option"><input type="checkbox" name="services" value="TV mounting/dismounting"> TV mounting / dismounting</label>
+                <label class="checkbox-option"><input type="checkbox" name="services" value="Packing"> Packing</label>
+                <label class="checkbox-option"><input type="checkbox" name="services" value="Old furniture removal"> Old furniture removal</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Anything Else?</label>
+              <textarea id="message" name="message" rows="3" placeholder="Any other details we should know about"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-full">Send Quote Request</button>
           </form>
