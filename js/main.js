@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const accessDropoff = formData.get('access_dropoff');
     const parking = formData.get('parking');
     const services = formData.getAll('services');
+    const callMe = formData.get('call_me');
     const message = formData.get('message');
 
     // Build email body
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `Drop-off: ${to}\n` +
       `Preferred Date: ${date || 'Not specified'}\n\n` +
       `ITEMS\n` +
-      `Large Items: ${items || 'Not specified'}\n` +
+      `List of Items: ${items || 'Not specified'}\n` +
       `Fragile Items: ${fragile || 'Not specified'}\n\n` +
       `ACCESS & PARKING\n` +
       `Pickup Access: ${accessPickup || 'Not specified'}\n` +
@@ -109,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `Parking: ${parking || 'Not specified'}\n\n` +
       `ADDITIONAL SERVICES\n` +
       `${services.length > 0 ? services.join(', ') : 'None selected'}\n\n` +
+      `WOULD LIKE A CALL: ${callMe || 'Not specified'}\n\n` +
       `OTHER NOTES\n${message || 'None'}`
     );
 
