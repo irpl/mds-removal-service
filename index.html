@@ -396,12 +396,12 @@
             <h3>Request a Free Quote</h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                <label for="phone">Phone Number <span class="form-optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
               </div>
             </div>
             <div class="form-group">
@@ -411,11 +411,11 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="from">Pickup Location</label>
-                <input type="text" id="from" name="from" placeholder="e.g. St. Andrew, Kingston 8" required>
+                <input type="text" id="from" name="from" placeholder="Please be as detailed as possible" required>
               </div>
               <div class="form-group">
                 <label for="to">Drop-off Location</label>
-                <input type="text" id="to" name="to" placeholder="e.g. Portmore, Spanish Town" required>
+                <input type="text" id="to" name="to" placeholder="Please be as detailed as possible" required>
               </div>
             </div>
             <div class="form-group">
@@ -423,7 +423,7 @@
               <input type="date" id="date" name="date">
             </div>
             <div class="form-group">
-              <label for="items">Large Items</label>
+              <label for="items">List of Items</label>
               <textarea id="items" name="items" rows="3" placeholder="e.g. Queen bed, double-door fridge, 3 couches, washing machine"></textarea>
             </div>
             <div class="form-group">
@@ -470,6 +470,13 @@
                 <label class="checkbox-option"><input type="checkbox" name="services" value="TV mounting/dismounting"> TV mounting / dismounting</label>
                 <label class="checkbox-option"><input type="checkbox" name="services" value="Packing"> Packing</label>
                 <label class="checkbox-option"><input type="checkbox" name="services" value="Old furniture removal"> Old furniture removal</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Would you like us to call you?</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="call_me" value="Yes"> Yes</label>
+                <label class="radio-option"><input type="radio" name="call_me" value="No" checked> No</label>
               </div>
             </div>
             <div class="form-group">

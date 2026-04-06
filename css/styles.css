@@ -877,6 +877,12 @@ h3 { font-size: 1.25rem; }
   color: var(--dark);
 }
 
+.form-optional {
+  font-weight: 400;
+  color: var(--gray-400);
+  font-size: 0.8rem;
+}
+
 .form-group input,
 .form-group textarea,
 .form-group select {
